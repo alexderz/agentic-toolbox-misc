@@ -17,3 +17,7 @@ has a permissive license file.
 Read [skills/minecraft-builder/SKILL.md](skills/minecraft-builder/SKILL.md).
 The catalog is `skills/minecraft-builder/references/blocks.json`. Numeric
 protocol state ids are omitted on purpose.
+
+## pr-lens
+
+[skills/pr-lens/SKILL.md](skills/pr-lens/SKILL.md) renders PR diagrams using the pinned @coldtea/pr-lens-cli@0.8.1. The skill rewrite is MIT licensed; see its scoped [LICENSE](skills/pr-lens/LICENSE) and [provenance](SOURCES.md). The CLI installs an ISC-licensed yaml dependency at runtime. This move does not change that dependency or grant a blanket license to this repository.
