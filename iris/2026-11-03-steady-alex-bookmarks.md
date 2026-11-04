@@ -58,3 +58,68 @@ Pulled Tue Nov 3, 2026 ~9:20am CT. Baseline: [Nov 2 scan](2026-11-02-steady-alex
 - **License:** MIT.
 - **Release:** GitHub repo created Oct 27 2026, last push Nov 3 2026; no tagged releases.
 - **Links:** https://github.com/benmaster82/Pithos · https://benmaster82.github.io/Pithos/
+
+---
+
+## Evening run (pulled Tue Nov 3, 2026 ~8:00pm CT)
+
+Baseline: the ~9:20am run above (151 total). 7 new bookmark ids on page 1, 0 memes. Total 158 if nothing was removed. **New folder:** "tech updates" (id 2117773554817126630), holding 1 item (Maya v1.1.51). Moodils +2, Cool tech to try +1, Keep an eye on this +3, tech updates +1.
+
+### Moodils
+
+#### NorthCUA Nano / Mini / Pro (beipo-ai)
+@QwenAIFans, Nov 3 5:08pm CT (Chinese). https://x.com/QwenAIFans/status/2117755815809732726
+- **What it is:** open-weight computer-use agent model family built on Qwen3.5 (image-text-to-text). Takes user requests, screenshots and interaction history; outputs reasoning, responses and tool calls for a desktop or browser runtime. GUI coordinates use a 0–1000 normalized space. The card says the official NorthCUA Harness is required for computer-use tasks.
+- **Family:** Nano 9B dense; Mini 35B total / 3B active MoE; Pro 397B total / 17B active MoE (`qwen3_5_moe`). HF safetensors param totals: Nano 9.41B, Mini 35.11B, Pro 396.80B.
+- **Reported results (technical report, not re-measured on the released files):** OSWorld-Verified RL success Nano 78.90 / Mini 85.30 / Pro 88.64; WebArena-Verified 67.16 / 70.43 / 73.89; ScreenSpot-Pro (SFT) 72.87 / 92.41 / 93.30; OSWorld-G (SFT, best of 3 runs) 82.98 / 87.94 / 90.96. Pro OSWorld 2.0 mean partial credit 66.80% (108 tasks). Report is 121 pages.
+- **License:** Apache-2.0.
+- **Hardware:** Transformers with `Qwen3_5ForConditionalGeneration` (export config records Transformers 5.20.2), PyTorch, Accelerate. Card gives no specific GPU requirement.
+- **Release:** HF repos created Oct 30 (Pro) and Nov 1 2026 (Nano, Mini), updated Nov 3 2026.
+- **Links:** https://huggingface.co/beipo-ai/NorthCUA-Pro · https://huggingface.co/beipo-ai/NorthCUA-Mini · https://huggingface.co/beipo-ai/NorthCUA-Nano · harness https://github.com/china-qijizhifeng/NorthCUA-Harness · project page https://beipo.top/blog/northcua/ · report https://arxiv.org/pdf/2611.02102v1
+
+#### Crouton Alpha (stealth model on OpenRouter)
+@aitrackerbot, Nov 3 2:29pm CT. https://x.com/aitrackerbot/status/2117715857237258558
+- **What it is:** stealth (unnamed-vendor) model listed on OpenRouter as `stealth/crouton-alpha`. OpenRouter description: "a lightweight model built for scalable coding, agentic, and multimodal workflows… agentic sub-tasks, tool use, and document analysis in high-volume, repeated work."
+- **Attribution (unconfirmed, per post):** looks like Meta; OpenCode's page lists the same 21 blocked countries as Meta's model API; fails on a rare Japanese word that every Meta Muse model fails on (93 other models: 0 misses); only Meta's Muse listings on OpenRouter share its reasoning-effort settings. Post says "Not confirmed."
+- **Specs (OpenRouter API):** input text, image, file, audio, video; output text. Context 1,048,576 tokens; max completion 943,718. Reasoning mandatory, efforts max / xhigh / high / medium / low / minimal (default max). Supports tools, structured outputs. Price $0 prompt / $0 completion. Single provider "Stealth". Listed Nov 2 2026 7:38pm CT.
+- **License / weights:** hosted only, no Hugging Face id.
+- **Links:** https://openrouter.ai/stealth/crouton-alpha
+
+### Cool tech to try
+
+#### Weight-space programming: Qwen 3.8 27B reading model weights (Simon Willison)
+@simonw, Nov 3 10:31am CT. https://x.com/simonw/status/2117655816581071203
+- **What it is:** blog post reproducing one experiment from the "Sparks of Weight-Space Programming" post (Rikiya Takehi, Jayden Teoh, Alex Zhang, Omar Khattab), which reports GPT-6 Astra identifying what a network was trained to do from raw weights given as text, writing small game-playing networks from scratch, and editing 0.016% of Qwen3.5-0.8B weights to raise MATH-500 from 7.9% to 48.1%.
+- **Willison's result:** with no tools, Qwen 3.8 27B (17 GB build in LM Studio, long context required) identified Pac-Man (46m 12s, 43,506 reasoning tokens, 72% confidence), Pong (1h 4m 54s, 75%) and Breakout (52m 25s, 88%) from the policy-network weight prompts; it failed on Freeway. Kimi K3.1 Pro via OpenRouter identified Breakout in 9m 41s, 19,493 reasoning tokens.
+- **Tools used:** `llm` CLI with `llm-lmstudio` / `llm-openrouter` plugins (Apache-2.0); prompts from the paper's log repo.
+- **Links:** https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/ · prompts https://github.com/RikiyaT/lm_understand-logs (exp1_which_game)
+
+### Keep an eye on this
+
+#### Weight-space programming from scratch (Chandan Singh, csinva)
+@0x0SojalSec, Nov 2 7:11pm CT. https://x.com/0x0SojalSec/status/2117424378807976074
+- **What it is:** experiment where Claude, as an autonomous coding agent, set every weight of a small GPT-style transformer by hand (no training, optimizer or backprop) and wrote 959 "weight-space programs" across 13 tasks. All 10 algorithmic tasks (addition, multiplication, sorting, parity, GCD, decimal-to-binary, etc.) reached 100% on 200 eval examples within three attempts; runs then compressed the programs (e.g. decimal-to-binary 124,000 → 192 params; parity program 174 params, 35 nonzero). Each head and neuron has a written explanation. The report states the 3 language tasks (SST-2, MRPC, SNLI) are affected by an evaluation flaw (eval examples in the readable pool; SNLI 100% invalid) and that all programs share one eval seed.
+- **License:** none declared on the GitHub repo.
+- **Release:** report dated Nov 2 2026; repo created May 15 2026, last push Nov 3 2026.
+- **Links:** https://csinva.io/weight-space-programming-autoresearch/analyze/toy_examples/report.html · https://github.com/csinva/weight-space-programming-autoresearch
+
+#### NVIDIA Auto Ontology
+@Ldataengineer, Nov 2 6:46pm CT. https://x.com/Ldataengineer/status/2117418155647684676
+- **What it is:** open-source Python framework for a semantic, graph-based "context layer" between AI agents and databases. Discovers database metadata and drafts an ontology of business terms, grounds agents on those terms, validates generated SQL against certified definitions, exposes everything through MCP (9 read-only tools, no raw-table browsing tool), CLI or API, and feeds certified corrections back. Returns the answer, the SQL run and the rows.
+- **Backends:** Databricks, Postgres, Snowflake, DuckDB. Defaults to NVIDIA Nemotron models; any OpenAI-compatible endpoint works. Deploys with Docker Compose or Helm. Ships a BIRD eval harness (1,534 questions) without published scores; the post notes the "90% faster" claim is NVIDIA's own testing and that without HashiCorp Vault database passwords are stored unencrypted in Postgres (per README). Not accepting outside contributions.
+- **License:** Apache-2.0.
+- **Release:** GitHub repo created Apr 27 2026, last push Nov 3 2026; 3,003 stars at time of check; no tagged releases.
+- **Links:** https://github.com/NVIDIA/auto-ontology
+
+#### dsh-jailbreak-workflow / dsh-workflows (Minglink)
+@NFT_Chen, Nov 2 11:19pm CT (Chinese). https://x.com/NFT_Chen/status/2117486881399284175
+- **What it is:** "soft workflow" plugin for DeepSeek Harness (DSH 0.2.x): design a flow on a canvas, compile it into one plan prompt, and the model in the current session executes it (branches, loops, parallel steps, rollback; no separate execution engine). Can export a flow as a Skill. The companion pack repo publishes a 15-step "破甲制作" (jailbreak-prompt-making) research pipeline: 200+ probes, refusal-pattern analysis, custom prompt generation, API verification, and an output bundle of prompt file, usage manual and research report; bundles a jailbreak-research skill with 10 test scripts and 4 prompt templates. Install per post: `dsh plugin --profile web add @xiaoso/dsh-workflow-lite`, then import the `.wflite.zip` in DSH's Workflow hub. Marked experimental.
+- **License:** plugin repo MIT (covers its own code only; third-party notices file); workflows repo MIT. Node 22+.
+- **Release:** both repos created Nov 1 2026, last push Nov 3 2026 (347 and 118 stars at check).
+- **Links:** https://github.com/Minglink/dsh-jailbreak-workflow · https://github.com/Minglink/dsh-workflows · DeepSeek Harness https://github.com/deepseek-ai/deepseek-harness
+
+### tech updates (new folder)
+
+#### Project Maya v1.1.51
+@PeasantSmith, Nov 3 2:47am CT. https://x.com/PeasantSmith/status/2117539150362448281
+- Release already summarized in the morning section above (under Project Maya v1.1.50, "Since then"). Post adds: CYBER-FROST gets a thinking Off button. MIT. https://github.com/mw00/project-maya/releases/tag/v1.1.51
