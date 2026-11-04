@@ -123,3 +123,19 @@ Baseline: the ~9:20am run above (151 total). 7 new bookmark ids on page 1, 0 mem
 #### Project Maya v1.1.51
 @PeasantSmith, Nov 3 2:47am CT. https://x.com/PeasantSmith/status/2117539150362448281
 - Release already summarized in the morning section above (under Project Maya v1.1.50, "Since then"). Post adds: CYBER-FROST gets a thinking Off button. MIT. https://github.com/mw00/project-maya/releases/tag/v1.1.51
+
+## ~11:50pm CT run
+
+Baseline: the ~8pm run above (158 total). 1 new bookmark id on page 1, 0 memes, no new folders. Total 159 if nothing was removed. Moodils +1.
+
+### Moodils
+
+#### Latent Sparse Attention (LSA), Prefrontal
+@0x0SojalSec, Nov 3 3:19pm CT. https://x.com/0x0SojalSec/status/2117728424978715116
+- **What it is:** sparse-attention method for ultra-long context (1M+ tokens). Keys are hierarchically clustered in a learned latent space and each query scores the clusters instead of every key; the attention kernel is unchanged, LSA only picks which keys are read. Two variants: D-LSA (Distilled), added to a pre-trained model by distilling its indexer, no full retraining; N-LSA (Native), trained from scratch on next-token loss, matching full-attention accuracy with 1.6x faster training per layer at 128k tokens.
+- **Reported numbers (Prefrontal's own tables):** Qwen3.8-27B with D-LSA vs full attention, one attention layer on one H200: prefill 8.2x at 1M, 72.4x at 10M tokens; decode 5.2x at 1M, 42.5x at 10M. Whole model in SGLang on 8x H200: time to first token 1.5x at 1M, 9.2x at 10M; time per output token 1.0x at 1M, 2.9x at 10M. On B300 at 10M: layer prefill 42.9x, decode 18.4x; end-to-end TTFT 5.7x. GLM-5.3-Flash with D-LSA vs its own sparse attention at 10M: layer prefill 22.7x, decode 4.6x; end-to-end TTFT 2.2x. Knowledge and reasoning benchmarks within two points of the original models; Qwen keeps pace on RULER up to 10M tokens; LongBench v2 drop of 5 points (within the 95% CI); GLM trails on RULER by up to about 8 points at 2M–5M tokens. At 10M tokens the D-LSA (Flat) index is 246 MiB per layer.
+- **Weights:** distilled index maps (not full models) in GitHub release `d-lsa-weights-v1` (published Nov 2 2026): two Qwen3.8-27B maps (~6.3 MB each) and three GLM-5.3-Flash maps (2.9–23 MB); N-LSA comparison checkpoints in release `n-lsa-weights-v1`. No Hugging Face org found for Prefrontal; the base model is Qwen/Qwen3.8-27b on Hugging Face.
+- **Hardware / serving:** paper results measured on NVIDIA H200; serving uses Prefrontal's SGLang fork (`lsa-v0.1.0`, container image built with Docker buildx + enroot) with `--attention-backend fa3` and `--disable-prefill-cuda-graph`; 10M-token runs use 8 GPUs with context or tensor parallelism. Distilling a Qwen3.8-27B map took 1 h 52 min on 1 H200 per the README.
+- **License:** Apache-2.0.
+- **Release:** paper arXiv 2610.42147; GitHub repo created Oct 27 2026, last push Nov 3 2026, 324 stars at check.
+- **Links:** https://prefrontal.ai/news/lsa/ · https://github.com/Prefrontal-AI/latent-sparse-attention · https://arxiv.org/abs/2610.42147 · https://github.com/Prefrontal-AI/latent-sparse-attention/releases/tag/d-lsa-weights-v1 · https://huggingface.co/Qwen/Qwen3.8-27b
