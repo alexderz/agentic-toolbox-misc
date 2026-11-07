@@ -46,3 +46,20 @@ Post: "OrcaCyber Ripple 65B Abliterated / Uncensored is available in GGUF and ML
 - **Size and hardware:** 27B params; HF Transformers safetensors in 18 shards (`model-00001-of-00018.safetensors` …). Same class of local hardware as Qwen3.8-27B (base is a 27B dense hybrid-attention VLM with native 262K context). No GGUF in the primary repo at pull time.
 - **Release:** Blog "November 2026"; HF repo created Nov 6 2026 1:31pm CT (2026-11-06T19:31:28Z); lastModified Nov 6 2026 ~3:04pm CT. Developer: Nous Research. Evaluated checkpoint: step 1,202.
 - **Links:** https://nousresearch.com/arete · https://huggingface.co/NousResearch/Arete-27B · eval https://huggingface.co/datasets/NousResearch/Propaganda_Eval · training data https://huggingface.co/datasets/NousResearch/arete-data-pairs · base https://huggingface.co/Qwen/Qwen3.8-27B
+
+---
+
+## Update: Nov 6 2026 ~11:58pm CT run
+
+Pulled Fri Nov 6, 2026 ~11:57pm CT. New vs baseline: 1 bookmark id (Cool tech to try). Folders unchanged (6). Highest snowflake still `2118822925445050435`.
+
+## Cool tech to try
+
+### "Can LLMs redesign themselves as they train?" (doubleAI)
+@_doubleAI_, Nov 6 9:52am CT, 6-post thread. https://x.com/_doubleAI_/status/2118733156069032292
+- **What it is:** Research blog post on putting LLM coding agents inside a neural network's training loop so they change the architecture mid-training ("mechanistic intervention"), not just the weights. Agents write small programs and insert them into the live network as "code layers" behind a zero-initialized gate, then SGD continues training. On Karpathy's nanochat the agent found a technique doubleAI calls "phantom gradients" (a measure of demand in the network unmet by SGD) to choose and rank candidate code layers.
+- **Reported results (publisher):** nanochat loss fell below ordinary training after each new code layer. CLRS-Text algorithmic reasoning accuracy 55% to 84% overall, and 33% to 79% on unseen input sizes. Inserting code layers at the start of training instead of later dropped recall from 72% to 55%. DeepSeek-V4.1-Flash acting as the agent on itself (it located hidden-state signals of wrong answers and wrote a code layer predicting such failures) raised AIME 2026 + HMMT 2026 score from 64% to 71%.
+- **License / code:** Blog post only. No code repo, weights, or paper from doubleAI linked on the blog page at pull time; the blog links to public tools it built on (`karpathy/nanochat`, `karpathy/autoresearch`, `deepseek-ai/DeepSeek-V4.1-Flash-1017`, `Qwen/Qwen3-8B`, MathArena AIME/HMMT 2026 datasets).
+- **Size and hardware:** Not stated in the thread.
+- **Release:** doubleAI research blog, Nov 2026 (thread Nov 6 2026 9:52am CT). Project led by @AlonVin. doubleAI describes itself as "the frontier AI lab for the hardest problems in science and engineering" (makers of Maxwell and Double Agent).
+- **Links:** https://www.doubleai.com/research/can-llms-redesign-themselves-as-they-train · https://www.doubleai.com/research · https://github.com/karpathy/nanochat
