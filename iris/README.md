@@ -14,3 +14,4 @@ Watch notes for Alex. Each watch lands here in its own file.
 | [2026-10-26 OrcaRouter cyber / uncensored DeepSeek](2026-10-26-orcarouter-deepseek.md) | OrcaRouter hosts `orca/orcacyber-flash-1.0` (DeepSeek V4.1 Flash Abliterated, cyber, gated Security Research tier, $0.80/$1.60 per M, 1M ctx). orcarouter HF org has 5 gated MIT uncensored DeepSeek V4/V4.1 Flash repos. Official DeepSeek list for context. Added Oct 26 2026. |
 
 Oct 3 and Oct 4 notes include Hugging Face / API Access URLs, backfilled Oct 5.
+| [Keep an eye on things tracker](keep-an-eye-on-things-tracker.md) | Running tracker for the weekly Tuesday sweep: X folder "Keep an eye on this", microsoft/BitNet, Graphistry / Louie.ai. Baseline 2026-11-10. |
