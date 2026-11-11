@@ -63,3 +63,13 @@ Post: https://x.com/i/status/2120169614751502699 (@TeksEdge; quotes https://x.co
 - **License:** custom (source-available; GitHub reports NOASSERTION).
 - **Size and hardware:** 249 GB weights; RTX 3060 12GB, 30 GB RAM, SSD.
 - **Release:** RustingStudio; post Nov 10, 2026.
+
+## Run ~11:58pm CT (Nov 10, 2026)
+
+### TensorFold: ~700 tps on a single RTX 5090 with Qwen 3.8 27B (via @tolewis, @ashxhart)
+Post: https://x.com/i/status/2120309085115482253 (@tolewis quote of https://x.com/i/status/2120292846431347076 by @ashxhart)
+- **What it is:** TensorFold is an LLM inference engine written in Zig for Metal (Apple Silicon), CUDA (NVIDIA) and Vulkan; serving needs no Python or MLX. @ashxhart's post (Nov 10, 2026, ~5:09pm CT, 38s video) claims ~700 tps on a single 5090 with Qwen 3.8 27B. @tolewis's post says concurrency doesn't need to work across other context windows and uses the one window available. Developer-reported figure; not independently verified here.
+- **Links:** GitHub https://github.com/ashhart/TensorFold · site https://tensorfold.dev · latest release v1.2.6 (Nov 10, 2026; v1.2.5 Nov 8) · contributor tooling https://github.com/ashhart/ATC
+- **License:** Apache-2.0.
+- **Size and hardware:** Apple Silicon or NVIDIA GPU; the claim is for one RTX 5090 (32 GB) with Qwen 3.8 27B (base: Qwen/Qwen3.8-27B). A community TensorFold-format checkpoint exists on Hugging Face: https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit (MIT-tagged, not by the TensorFold author).
+- **Release:** @ashxhart (GitHub ashhart); v1.2.6 adds private unix-socket serving (contributed by @kotevcode).
