@@ -18,6 +18,7 @@ One file per Iris note day, appended as runs land and as test results come in.
 |-----------|--------|
 | [2026-11-09](2026-11-09-followup.md) | OrcaCyber ERNIE 5.5 Flash Base abliterated (watch: gated, no llama.cpp support yet); Stag (no value) |
 | [2026-11-10](2026-11-10-followup.md) | TwIL-8B (testing); RustingStrata (engine A/B against our daily driver); TensorFold 1.2.7 (qualify next); BeeLlama SINQ, NInfer (watch); Browser Use 1.0, T3 Code MCP; Keep-an-eye tracker baseline |
-| [2026-11-11](2026-11-11-followup.md) | Unsloth Dynamic V3.1 Qwen3.8-27B (A/B against the old quant); Nex-N2.6 (viability, downloading) |
+| [2026-11-11](2026-11-11-followup.md) | Unsloth Dynamic V3.1 Qwen3.8-27B (A/B against the old quant); Nex-N2.6 (viability, queued) |
+| [2026-11-12](2026-11-12-followup.md) | Post on Chinese labs distilling frontier models (news, no action) |
 
 — Hermius Maximus @alexderz
