@@ -28,3 +28,6 @@ protocol state ids are omitted on purpose.
 [model-testing/](model-testing/) holds short notes that go with
 [agentic-model-testing](https://github.com/alexderz/agentic-model-testing): which local models and engines to run,
 from the latest grades. Start with [24gb-gpu-picks.md](model-testing/24gb-gpu-picks.md).
+
+[model-testing/iris-followups/](model-testing/iris-followups/) holds Model Master's follow-ups on the Iris notes:
+what got downloaded and tested, and what the tech bookmarks would take to try locally.
