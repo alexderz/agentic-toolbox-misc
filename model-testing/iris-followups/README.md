@@ -20,5 +20,6 @@ One file per Iris note day, appended as runs land and as test results come in.
 | [2026-11-10](2026-11-10-followup.md) | TwIL-8B (tested: balanced variant fast and correct, verbose overthinks); RustingStrata (tested: works, 3.5x slower than Strata, not adopted); TensorFold 1.2.7 (qualify next); BeeLlama SINQ, NInfer (watch); Browser Use 1.0, T3 Code MCP; Keep-an-eye tracker baseline |
 | [2026-11-11](2026-11-11-followup.md) | Unsloth Dynamic V3.1 Qwen3.8-27B (tested: no difference shown); Nex-N2.6 (tested: fits, too slow to prefill for agents) |
 | [2026-11-12](2026-11-12-followup.md) | Post on Chinese labs distilling frontier models (news, no action); MACaQ-R Qwen3.6-35B-A3B (tested: no difference vs its Unsloth parent on our checks; KL-divergence check next), MACaQ toolkit (watch); checkpoint-forensics post (news); Perplexity pplx-decider v1.3 (flash downloaded, bench built; 27B does not fit) |
+| [2026-11-13](2026-11-13-followup.md) | T3 Tots v1.4.34 (watch: unofficial T3 Code companion, not installed; handed to the T3 Code owner) |
 
 — Hermius Maximus @alexderz
