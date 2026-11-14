@@ -35,3 +35,20 @@ Five bookmarks new since the Nov 13 notes (all unfiled folder, 0 memes).
 - **What it is:** original launch post for T3 Tots, a Grok Bot companion for T3 Code (does the routine parts and surfaces only items needing attention; works across multiple computers). Name credit to @poteto. Video attached (38 s). Release v1.4.34 was filed in the Nov 13 note.
 - **Links:** post https://x.com/Deepusleepy/status/2114928745647895003 · repo https://github.com/Deepusleepy/t3-tots
 - **License:** MIT (per Nov 13 note).
+
+## 4pm CT run (Nov 14, 2026)
+
+Two bookmarks new since the 12pm run (unfiled folder, 0 memes).
+
+### Tess-4.5-594B-A17B (Migel Tissera / Continuity Research)
+- **What it is:** post-train of Thinking Machines' Inkling 2 Small (594B-parameter MoE, 17B active, 1M-token context, image-text-to-text) with the Tess-4.5 agentic-coding recipe. Card figures: SWE-Bench Pro v2 Hard 88.2% vs 86.3% for the base (51 tasks, 45 resolved, 4.07M vs 4.45M output tokens, about 9% fewer); LongBench v2 70.2% vs 70.6%; AA-LCR v1.1 85.0% vs 83.3%; run at reasoning_effort xhigh (high scored 70.6% on the same 51 tasks). Trained on Tinker on 46.9M tokens of anonymized agentic coding sessions; LoRA merged into BF16 attention projections and output head, experts kept as base (NVFP4/MXFP8).
+- **Links:** post https://x.com/migtissera/status/2121348529910321660 · HF https://huggingface.co/migtissera/Tess-4.5-594B-A17B · LoRA https://huggingface.co/migtissera/Tess-4.5-594B-A17B-LoRA · Tess-4.5-27B https://huggingface.co/migtissera/Tess-4.5-27B · base https://huggingface.co/thinkingmachines/Inkling-2-Small · https://continuityresearch.ai/
+- **License:** Apache-2.0.
+- **Size and hardware:** about 394 GB of repo storage on HF (safetensors, about 383B counted parameters in stored formats: F8_E4M3, U8/NVFP4, BF16); same checkpoint format, serving recipes and hardware as Inkling 2 Small (per card).
+- **Release:** HF repo created Nov 13, 2026; post Nov 13, 2026 (about 3:04pm CT).
+
+### MACaQ post by @NFT_Chen (Chinese-language, Nov 14, 2026)
+- **What it is:** post on Huawei's MACaQ (Model Agnostic Calibrated Quantization): streaming layer-by-layer quantization; post claims Qwen 122B quantized in 64 minutes with 32.5 GB peak VRAM; W4A4 (MXFP4) lower perplexity than MR-GPTQ and DuQuant++ or equal at 1/11 the quantization time; Qwen3-series W4A4 prefill 2.33x, decode 2.58x with +2.3% overhead; text, image, video, audio and 3D models; outputs GGUF (llama.cpp), vLLM, Diffusers, PyTorch; MACaQ-R refines existing GGUFs. Quotes an earlier @NFT_Chen post (2121538580300574883) on llama.cpp v1.0.0 with Qwen3.8-27B (MTP speculative decoding about 74 to 134 tok/s on one RTX 5090 per that post).
+- **Links:** post https://x.com/NFT_Chen/status/2121632966774501679 · code https://github.com/huawei-csl/MACaQ · paper https://arxiv.org/abs/2611.10649 · llama.cpp v1.0.0 https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0 · https://huggingface.co/blog/ggml-org/llama-cpp-v1
+- **License:** Apache-2.0 (GitHub).
+- **Release:** repo created Nov 10, 2026, last push Nov 12, 2026; earlier MACaQ post filed in the Nov 12 note.
