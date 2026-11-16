@@ -21,3 +21,14 @@ One bookmark new since the 8am notes (unfiled folder, 0 memes).
 - **License:** Apache-2.0 (quant and base).
 - **Size and hardware:** 4 language-model shards, 150.0 GB total; mmproj F16 0.66 GB; MTP BF16 3.4 GB. Card example: llama-server with `-ngl 99 -c 32768`, `--n-cpu-moe N` / `--cpu-moe` to keep experts in system RAM.
 - **Release:** published by peasantsmith on Hugging Face, last modified Nov 15, 2026; base model by Thinking Machines.
+
+## 8pm CT run (Nov 15, 2026)
+
+One bookmark new since the 4pm notes (unfiled folder, 0 memes).
+
+### Unharnessed, a one-tool (Python REPL) coding-agent harness (post by @RayaneRachid_, Nov 15, 2026)
+- **What it is:** a coding-agent harness whose model gets exactly one tool, `ipython`, a persistent CPython REPL (no read/grep/edit/fetch tools; the model writes Python for those and keeps helper functions as variables in the session). Harness in Rust: agent loop, compaction, goals, provider retry/failover, sessions. Ships as a VS Code extension, a headless CLI and an ACP agent. Runs commands with user permissions without prompting; the kernel is not a sandbox (stated in the README). Post claims a new state-of-the-art on Terminal-Bench 4.0; the site reports 47 of 66 tasks passed with Claude Opus 5.5 and a score-versus-cost comparison against Claude Code and Codex. Terminal-Bench 4.0: 66 tasks, 8-hour flat agent timeout, from the Laude Institute/Harbor framework (v4.0.0 released 2026-08-26; v4.1.0 on 2026-11-03).
+- **Links:** post https://x.com/RayaneRachid_/status/2122024268368380148 · site https://unharnessed.dev/en · code https://github.com/unharnessed-agent/Unharnessed · Terminal-Bench 4.0 https://www.tbench.ai/news/terminal-bench-4-0
+- **License:** MIT (LICENSE file also credits Prime Intellect Ltd. and Mario Zechner portions).
+- **Size and hardware:** kernel is a CPython 3.11+ process in a uv-managed venv built on first run; model is provider-supplied (no local weights).
+- **Release:** unharnessed-agent GitHub org; repo created 2026-10-02; latest release vscode-v0.0.4 published 2026-11-15.
