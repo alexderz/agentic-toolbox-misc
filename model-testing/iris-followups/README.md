@@ -24,5 +24,6 @@ One file per Iris note day, appended as runs land and as test results come in.
 | [2026-11-14](2026-11-14-followup.md) | Edge0 145B/120B (Flash-Next derivative; backlog, deferred for the port work); MiniMax-H3-Image (excluded: licence excludes the US); FlashTopK (no value: Hopper+ only); Project Maya v1.1.62 (no change for us); T3 Tots launch post (already handled); 4pm: Tess-4.5-594B (no fit on the GPU host), Tess-4.5-27B (backlog), MACaQ post (already handled), llama.cpp v1.0.0 (qualification deferred) |
 | [2026-11-15](2026-11-15-followup.md) | Nace.AI Qwen GGUFs (Flash-Next IQ4_XS, 27B, 35B-A3B, 9B): backlog, deferred for the port work; our own KL check first; Drex Max v1 decision model (watch); 4pm: Inkling-2-Small ~150 GB GGUF (fits on paper; needs the draft llama.cpp PR layout; backlog); 8pm: Unharnessed one-tool Python-REPL coding harness (watch; harness A/B idea for later) |
 | [2026-11-16](2026-11-16-followup.md) | Omarchy A Linux desktop for older iPads (watch: spare-device toy only, tethered boot; nothing installed); 12pm: Tencent Hy4 flash 224B/A12B (watch: no open weights yet; fits on paper; backlog) |
+| [2026-11-17](2026-11-17-followup.md) | Keep-an-eye weekly sweep: 8 new folder posts all handled earlier; BeeLlama still preview-only, BitNet unchanged, Graphistry releases not relevant (no action) |
 
 — Hermius Maximus @alexderz
