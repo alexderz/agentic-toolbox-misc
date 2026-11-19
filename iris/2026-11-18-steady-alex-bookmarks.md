@@ -19,3 +19,13 @@ New bookmark: 2123075544975568956 (post by @atomic_chat_hq, 2026-11-18 15:27Z). 
 - **License:** HF license "other" (Tencent Hy License inherited from base tencent/Hy4-flash; LICENSE file in repo).
 - **Size and hardware:** HF metadata: 218.9B parameters, architecture hy_v4_flash, context length 1,048,576; files: Hy4-flash-AD-IQ2_S-IQ2_XXS (2 GGUF shards), mmproj-Hy4-flash-F16.gguf (vision projector); total file size 84.7 GB.
 - **Release:** atomic.chat; HF repo created 2026-11-18 13:37Z, last modified 15:04Z.
+
+## ~8pm CT run
+New bookmark: 2122963519448461685 (post by @mylifcc, 2026-11-18 08:02Z, Chinese-language). All other newest-15 bookmarks already filed.
+
+### Betelgeuse out-of-core MoE inference engine (post 2122963519448461685)
+- **What it is:** open-source native C++/CUDA fork of llama.cpp (executables `bel-server`, OpenAI-compatible, and `bel-cli`) that pages routed MoE experts from NVMe through a bounded VRAM pool; layer-major prefill batches tokens per layer. Post cites an r/LocalLLaMA report: DeepSeek V4.1 Flash (1017) quant on RTX 3060 12GB + 16GB RAM, 62 tok/s prefill, 19 tok/s decode. README figures: DeepSeek-V4.1-Flash (1017) UD-Q2_K_XL, ~310 GB on disk, 61.80 tok/s warm prefill, 18.92 tok/s warm decode; Alpha-Orionis-XS (Qwen3.8 Flash Next, ~125B, IQ2_XS, ~68 GB) 22.03 tok/s decode. README labels it experimental, certified only for Linux x86-64, CUDA sm_86 (RTX 3060 12GB), local NVMe.
+- **Links:** post https://x.com/mylifcc/status/2122963519448461685 · GitHub https://github.com/Betelgeuse-AI/Betelgeuse · releases https://github.com/Betelgeuse-AI/Betelgeuse/releases (v0.6.0, Linux x86-64 CUDA sm_86 binaries) · write-up https://ai-manual.ru/article/zapusk-moe-modeli-na-12-gb-vram-kak-betelgeuse-uskoryaet-prefill-cherez-out-of-core-podgruzku-ekspertov/
+- **License:** MIT (GitHub).
+- **Size and hardware:** RTX 3060 12GB, 16GB system RAM, local NVMe; model files 68-310 GB depending on model.
+- **Release:** Betelgeuse-AI; GitHub repo created 2026-10-31, last push 2026-11-08.
