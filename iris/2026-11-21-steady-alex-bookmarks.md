@@ -36,3 +36,26 @@
 - Post figures, 1x RTX 3090 (300W, Unsloth UD-Q4_K_XL, FP8 KV): 128.7 tok/s decode short vs 57.0 llama.cpp; 4K 124.2 / prefill 2,742 (vs 1,052); 64K 105.6 / 2,361 (vs 42.7 / 630); 128K 90.6 / 2,079; 340K 62.3 / 1,473 at 23.57 GiB peak VRAM, 344K context. GSM8K 74/96 vs 73/96 (KL 5.7e-5).
 - Repo: author said commits are being cleaned up for GitHub; no repo link in post.
 - Post: https://x.com/superalesha/status/2124102269138346409 (16s video)
+
+## Run ~8pm CT (Nov 21 2026): 4 new bookmarks
+
+### 2124216911353479388 — Project Maya v1.1.72 (Inkling 2 Mini preview)
+- Post: https://x.com/PeasantSmith/status/2124216911353479388 (PeasantSmith, Nov 21 2026)
+- Repo: https://github.com/mw00/project-maya (release v1.1.72: https://newreleases.io/project/github/mw00/project-maya/release/v1.1.72); engine/model repo https://github.com/alesha-pro/maya-inkling-mini
+- Adds Thinking Machines Lab Inkling 2 Mini as experimental preview on new engine maya-ik2; uses Unsloth Inkling-2-Mini-UD-Q4_K_XL weights plus vision tower.
+- License: MIT. Needs: Linux, single 24 GB NVIDIA GPU (RTX 30 / A100 or newer), up to 262,144-token context.
+
+### 2121706250174132386 — MiniMax-H3-Image (quantized builds)
+- Post: https://x.com/NFT_Chen/status/2121706250174132386 (NFT_Chen, Nov 14 2026; quotes https://x.com/nft_chen/status/2120988268070363521)
+- HF (official): https://huggingface.co/MiniMaxAI/MiniMax-H3-Image — 33.1B DiT text-to-image / image editing, license: other (MiniMax-H3-Image Community License; not granted in EU, UK, South Korea, US; hosted services or >$1M revenue need MiniMax written authorization).
+- GGUF quants: https://huggingface.co/unsloth/MiniMax-H3-Image-GGUF, https://huggingface.co/Abiray/MiniMax-H3-Image-GGUF (pruned DiT Q2_K–Q5_K from Comfy-Org checkpoint), https://huggingface.co/moonbox-dev/MiniMax-H3-Image-GGUF
+- Post claims VRAM cut from 68 GB to 6.4 GB with community quants (20+ quants, 110k downloads).
+
+### 2124200214047121512 — Surogate 3.7 Flash / Surogate3.7-35B-A3B
+- Post: https://x.com/flaviusburca/status/2124200214047121512 (flaviusburca, Nov 21 2026); publisher surogate.ai
+- HF: https://huggingface.co/surogate/Surogate3.7-35B-A3B — license Apache-2.0; 35B total / ~3B active MoE, qwen3_5_moe, post-trained from Qwen3.5-35B-A3B-Base, 1M context, MTP head, FP4 training on RTX 5090s.
+- Fits one DGX Spark at 1M context (up to 8 concurrent users) with Surogate Engine; site https://surogate.ai
+
+### 2124238286457917649 — inference-optimisation-skill
+- Post: https://x.com/0xSero/status/2124238286457917649 (0xSero, Nov 21 2026)
+- Repo: https://github.com/sybil-solutions/inference-optimisation-skill — agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, prefill, KV, startup, TTFT) on any hardware/quantization. License MIT. Post cites 30 user reports of 30% to 5x speedups.
