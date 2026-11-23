@@ -12,3 +12,17 @@
 - Post: https://x.com/OrcaCyberHQ/status/2124803137173340245 (@OrcaCyberHQ, Nov 23 2026 03:51 CT). Claims 26.4B parameters, runs locally on 12-16GB RAM, based on Thinking Machines Inkling 2 Mini (Apache 2.0 MoE, looped transformer), 48.2% on DeepSWE v1.1.
 - Post links no repo. No HF page under an OrcaCyber org found. Same-name abliterated repos by the orcarouter HF org (created Nov 23 2026 ~23:14 CT Nov 22): https://huggingface.co/orcarouter/Inkling-2-Mini-abliterated-GGUF and https://huggingface.co/orcarouter/Inkling-2-Mini-abliterated-MLX (link to the post not confirmed).
 - Base model: Inkling 2 Mini, Thinking Machines Lab, Apache 2.0. Other abliterated variants already on HF: e.g. https://huggingface.co/OpenUncensored/Inkling-2-Mini-Uncensored, https://huggingface.co/mrfakename/Inkling-2-Mini-abliterated. Not novel (abliteration of a filed model).
+
+## 2026-11-23 ~4pm CT run
+
+### 2124899507121139833 — Ling-3.2-air (inclusionAI / Ant Group)
+- Post: https://x.com/i/status/2124899507121139833 (Chinese-language announcement of the open-source release)
+- Hugging Face: https://huggingface.co/inclusionAI/Ling-3.2-air
+- SGLang cookbook: https://docs.sglang.io/cookbook/autoregressive/InclusionAI/Ling-3.2-air
+- Type: open-weight native multimodal MoE (image/video input, reasoning, tool calling); 124B total / 5.5B active; FP8 weights, about 129 GB in 13 safetensors shards. License: MIT (per search summary of the HF page).
+- Reported (model card): AutomationBench-AA 15.7% to 61%; Terminal-Bench 4.0 0% to 27%; Artificial Analysis Intelligence Index v5.0.1 score 23.
+
+### 2124890020263727264 — SSD expert streaming for DeepSeek V4.1 (post, author not confirmed)
+- Post: https://x.com/i/status/2124890020263727264 ("ship this tomorrow morning"; benchmarks on Mac M2/M4 Pro, RTX 3090/5090, DGX Spark; up to 3x streamed decode gain; full SSD expert streaming for DeepSeek V4.1). No repo linked in the post text.
+- Related public projects (not confirmed as the post's source): https://github.com/davidtai/mlx-stream (DeepSeek-V4.1-Flash plugin for mlx-serve, experts streamed from SSD, EXL3 3.0 bpw); https://github.com/antirez/ds4 (docs/DGX_SPARK.md); https://dwarfstar.sh/docs/deepseek-v4-1-flash/ (V4.1 Flash Q2 341 GiB, SSD streaming on 128GB Mac/Spark/Strix Halo).
+
