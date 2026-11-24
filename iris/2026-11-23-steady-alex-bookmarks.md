@@ -39,3 +39,14 @@
 - Post: https://x.com/kamilskowron/status/2124906227826073754 (2026-11-23 16:41 UTC; quotes https://x.com/kamilskowron/status/2124892466394374340, a GTX 1650 SUPER + RTX 2060 multi-GPU post)
 - Post says: every RTX 20 / GTX 16 card exposes a 256 MB CPU/peer-visible window into VRAM; author claims a hack that exposes all of it. No repo or license linked in the post. Related prior filed item: his GeForce P2P how-to (2124856757675549143). Not novel.
 
+
+## Run ~11:54pm CT Nov 23 2026 (1 new bookmark)
+
+### MemT-1.0-Pro (MemTensor x NVIDIA), memory-native model
+- Post: https://x.com/i/status/2124623963087126562 (2026-11-22 22:00 UTC; launch of MemT-1.0-Pro with @NVIDIAAIDev, compared to MemT-1.0-Flash)
+- Hugging Face: https://huggingface.co/MemTensor/MemT-1.0-Pro (family: MemT-1.0-Nano https://huggingface.co/MemTensor/MemT-1.0-Nano)
+- Code: https://github.com/MemTensor/MemT-1.0 ; paper: https://arxiv.org/abs/2610.26825 ; press release: https://www.prnewswire.com/news-releases/memtensor-releases-and-open-sources-memt-1-0-pro-a-554b-memory-native-model-302948905.html
+- What: open-weight model with a native memory block alongside attention (dynamic local memory plus trainable hyper memory); persistent state constant in size, about 66x less storage than full-context KV cache at 128K history (per model card). Pro: backbone NVIDIA-Nemotron-3-Ultra-550B-A55B, 554B total / 59B active, 4.23B trainable memory parameters, 13M dynamic memory state. Family: Nano (Qwen3.6-35B-A3B, 36B/3B), Flash (DeepSeek-V4-Flash, 288B/17B), Pro.
+- License: OpenMDW-1.1 (Pro, following the Nemotron backbone); inference code portions Apache-2.0.
+- Size/hardware: 226 safetensors shards (about 5 GB each, bf16); card loads with Transformers, trust_remote_code=True, bf16, device_map=auto, sdpa attention.
+- Publisher: MemTensor with NVIDIA; distributed training with Megatron-Core and Megatron Bridge.
