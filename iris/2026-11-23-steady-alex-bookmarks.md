@@ -26,3 +26,16 @@
 - Post: https://x.com/i/status/2124890020263727264 ("ship this tomorrow morning"; benchmarks on Mac M2/M4 Pro, RTX 3090/5090, DGX Spark; up to 3x streamed decode gain; full SSD expert streaming for DeepSeek V4.1). No repo linked in the post text.
 - Related public projects (not confirmed as the post's source): https://github.com/davidtai/mlx-stream (DeepSeek-V4.1-Flash plugin for mlx-serve, experts streamed from SSD, EXL3 3.0 bpw); https://github.com/antirez/ds4 (docs/DGX_SPARK.md); https://dwarfstar.sh/docs/deepseek-v4-1-flash/ (V4.1 Flash Q2 341 GiB, SSD streaming on 128GB Mac/Spark/Strix Halo).
 
+
+## Run ~7:46pm CT Nov 23 2026 (2 new bookmarks)
+
+### @MOVNTDQ deslop-please (linter for code structure)
+- Post: https://x.com/MOVNTDQ/status/2124947434078155043 (2026-11-23 19:25 UTC; quotes https://x.com/poteto/status/2121673563489140863)
+- Repo: https://github.com/deterministic-machines/deslop-please (Rust, MIT, created 2026-11-22; crates.io: deslop-please, `cargo install deslop-please`)
+- What: opinionated linter following "A Philosophy of Software Design" (deep modules, narrow interfaces); reports e.g. field-leak across modules; supports an allow-file. Post claims 23 issues found/fixed in bbtree and fewer tokens per task.
+- Hardware: CLI, no GPU. Not novel.
+
+### @kamilskowron RTX 20 / GTX 16 BAR hack (256 MB window opened to full VRAM)
+- Post: https://x.com/kamilskowron/status/2124906227826073754 (2026-11-23 16:41 UTC; quotes https://x.com/kamilskowron/status/2124892466394374340, a GTX 1650 SUPER + RTX 2060 multi-GPU post)
+- Post says: every RTX 20 / GTX 16 card exposes a 256 MB CPU/peer-visible window into VRAM; author claims a hack that exposes all of it. No repo or license linked in the post. Related prior filed item: his GeForce P2P how-to (2124856757675549143). Not novel.
+
