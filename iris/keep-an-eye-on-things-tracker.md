@@ -74,3 +74,20 @@ Baseline note: [2026-10-07-graphistry-investigation-harnesses.md](2026-10-07-gra
 - graphistry-skills: latest release still v0.5.2 (2026-07-26). Commits Nov 4–12 on the graphistry-mcp skill: community-ranking recipes, ties and blank-safe ranking, community totals, one-row community answers, kind filter (PR #39 merged 2026-11-11 CT) https://github.com/graphistry/graphistry-skills/commits/main
 - louie-py: v0.9.0 (2026-07-26), no commits since 2026-10-22. graphistry-mcp: no change (tags 0.1.4/0.1.1, last commit 2025-10-09). https://louie.ai/ returns 200. Graphistry blog and RSS: RSS returned a captcha challenge again; blog listing not re-verified beyond page fetch.
 - X, @lmeyerov Nov 11–16 (no @graphistry or @louie_ai posts found): Nov 16 replies describing coding-agent workflow: "intern-style" semi-autonomous long-running projects (morning/evening human check-in, autonomous coder following a dynamic plan, cron reviewer/planner) https://x.com/lmeyerov/status/2122377399371526148; human-in-the-loop tuning of repo {plan,review}/SKILL.md with layered review https://x.com/lmeyerov/status/2122202940584927277 and https://x.com/lmeyerov/status/2122142696034934932 (product-design misalignment, replacing "taste" with customer field demands recorded by FDEs/SEs); wiki and Gsheet reverse-entity-lookup index idea https://x.com/lmeyerov/status/2122425548983169297.
+
+## Entry 2026-11-24 (weekly sweep, ~10:30am CT)
+
+### 1. X bookmarks, folder "Keep an eye on this"
+- Folder read 2026-11-24 returned 20 posts. 3 are new since 2026-11-17, all already filed in dated bookmark scans:
+  - 2124890020263727264 (Nov 23): SSD expert streaming for DeepSeek V4.1; no repo linked in the post (author not confirmed) https://x.com/i/status/2124890020263727264 · note [2026-11-23](2026-11-23-steady-alex-bookmarks.md)
+  - @swarogan, Nov 21: StrataFlux paper https://arxiv.org/abs/2611.08363 · https://x.com/swarogan/status/2124102691194306800 · note [2026-11-21](2026-11-21-steady-alex-bookmarks.md)
+  - @mylifcc, Nov 20: Intel D270 vs NVIDIA RTX PRO 6000 Blackwell benchmark post https://x.com/mylifcc/status/2123997582825595108 · note 2026-11-21
+
+### 2. microsoft/BitNet
+- Checked 2026-11-24 ~10:30am CT. Releases: none. Tags: none. ~42.5k stars. `main` tip unchanged: `0b341e582afb` ("Add VibeASR.cpp release to News (#596)", 2026-07-27). Same six official microsoft Hub BitNet repos (newest created 2026-07-24). Change since 2026-11-17: none.
+
+### 3. Graphistry / Louie.ai
+- pygraphistry: latest release still 0.62.1 (2026-11-12). `master` commits through 2026-11-22 include release prep for 0.62.2 (PR #2360 merged 2026-11-22 01:07 UTC) https://github.com/graphistry/pygraphistry/commits/master ; no 0.62.2 release published at check time.
+- graphistry-skills: v0.5.2 (2026-07-26), last commit 2026-11-12 (unchanged). louie-py: v0.9.0 (2026-07-26), last commit 2026-10-22 (unchanged). graphistry-mcp: unchanged. Newest org repo by creation: zed-sample-data (created 2025-11-21, pushed 2026-11-23).
+- Graphistry blog: no new post found; https://louie.ai/ returns 200. @graphistry and @louie_ai: no posts since Nov 16.
+- X, @lmeyerov Nov 18–24: Nov 23 GFQL post ("embeddable open source graph query language for agents+analytics"; +3 OSS contributors that weekend; PRs to be released that week) https://x.com/lmeyerov/status/2124889688003760564 ; Nov 23 post on what it means for a database to be optimized for agents, from learnings with GFQL and @louie_ai ("compute tier is often all you need") https://x.com/lmeyerov/status/2124735752055771178 ; Nov 19 post sharing an AI-safety piece on LLM inference providers and zero data retention https://x.com/lmeyerov/status/2123458100770517284 ; Nov 18 post seeking collaborators on AI cybersecurity evals https://x.com/lmeyerov/status/2123190391113740503.
